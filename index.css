@@ -1,0 +1,22 @@
+.card-title {
+  height: 6rem;
+} 
+.card-img-top {
+  height: 17rem;
+}
+
+.list-title {
+  font-size: 28px;
+  height: 4rem;
+}
+
+.fa-th,
+.fa-bars {
+  color: rgb(153, 153, 153);
+}
+
+.fa-th:hover,
+.fa-bars:hover {
+  color: rgb(58, 83, 224);
+  cursor: pointer;
+} 
