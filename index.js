@@ -3,12 +3,12 @@ const INDEX_URL = BASE_URL + '/api/v1/movies/'
 const POSTER_URL = BASE_URL + '/posters/'
 const MOVIE_PER_PAGE = 12
 
-
 const dataPanel = document.querySelector('#data-panel')
 const searchForm = document.querySelector('#search-form')
 const searchInput = document.querySelector('#search-input')
 const paginator = document.querySelector('#paginator')
 const changeMode = document.querySelector('#icon-change-mode')
+const resetMode = document.querySelectorAll('#icon-change-mode i')
 
 // 用來存放所有電影資料的容器
 const movies = []
@@ -121,10 +121,16 @@ paginator.addEventListener('click', function onPaginatorClicked(event) {
 
 // 監聽 icon 現在是哪一個模式
 changeMode.addEventListener('click', function onChangeModeClicked(event) {
+  for (let i = 0; i < resetMode.length; i++) {
+    console.log(resetMode[i])
+    resetMode[i].classList.remove('changeMode')
+  }
   if (event.target.matches('#card-mode-button')) {
+    event.target.classList.add('changeMode')
     currentMode = "card"
     renderMovie(currentMode)
   } else if (event.target.matches('#list-mode-button')) {
+    event.target.classList.add('changeMode')
     currentMode = "list"
     renderMovie(currentMode)
   }

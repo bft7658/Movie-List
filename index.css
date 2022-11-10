@@ -1,6 +1,7 @@
 .card-title {
   height: 6rem;
-} 
+}
+
 .card-img-top {
   height: 17rem;
 }
@@ -19,4 +20,8 @@
 .fa-bars:hover {
   color: rgb(58, 83, 224);
   cursor: pointer;
-} 
+}
+
+.changeMode {
+  color: rgb(58, 83, 224);
+}

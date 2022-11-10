@@ -39,7 +39,7 @@ searchForm.addEventListener('submit', function onSearchFormSubmitted(event) {
   //錯誤處理：無符合條件的結果
   if (filteredMovies.length === 0) {
     return alert(`您輸入的關鍵字：${keyword} 沒有符合條件的電影`)
-  } 
+  }
   currentPage = 1
   renderPaginator(filteredMovies.length)
   renderMovieList(getMovieByPage(currentPage))
@@ -54,7 +54,7 @@ searchInput.addEventListener('input', function onSearchFormInput() {
   if (filteredMovies.length === 0) {
     searchInput.value = ''
     return alert(`您輸入的關鍵字：${keyword} 沒有符合條件的電影`)
-  }  
+  }
   currentPage = 1
   renderPaginator(filteredMovies.length)
   renderMovieList(getMovieByPage(currentPage))
@@ -136,7 +136,7 @@ function removeFromFavorite(id) {
     renderMovieList(getMovieByPage(currentPage))
     paginator.lastElementChild.classList.add('active')
   }
-  
+
 }
 
 // 按照電影的總數量計算出會有多少分頁數
